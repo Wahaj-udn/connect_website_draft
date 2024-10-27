@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Collaboration Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f1e8;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+        }
+        .header {
+            background-color: #6c757d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .tab-pane {
+            margin-top: 2rem;
+        }
+        .forgot-password-link {
+            display: block;
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        .forgot-password-form {
+            margin-top: 20px;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .links a {
+            color: #28a745;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Login to Collaboration Portal</h2>
+    </div>
+
+    <!-- Navigation Tabs for Different Login Types -->
+    <ul class="nav nav-tabs" id="loginTabs" role="tablist">
+        <li class="nav-item">
+            <button class="nav-link active" id="ngo-login-tab" data-bs-toggle="tab" data-bs-target="#ngo-login" type="button" role="tab" aria-controls="ngo-login" aria-selected="true">NGO Login</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="private-company-login-tab" data-bs-toggle="tab" data-bs-target="#private-company-login" type="button" role="tab" aria-controls="private-company-login" aria-selected="false">Private Company Login</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="government-login-tab" data-bs-toggle="tab" data-bs-target="#government-login" type="button" role="tab" aria-controls="government-login" aria-selected="false">Government Login</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" id="public-login-tab" data-bs-toggle="tab" data-bs-target="#public-login" type="button" role="tab" aria-controls="public-login" aria-selected="false">Public Login</button>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- NGO Login Form -->
+        <div class="tab-pane fade show active" id="ngo-login" role="tabpanel" aria-labelledby="ngo-login-tab">
+            <div class="card p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="ngo-email" class="form-label">NGO Email</label>
+                        <input type="email" class="form-control" id="ngo-email" placeholder="Enter your NGO email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ngo-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="ngo-password" placeholder="Enter password">
+                    </div>
+                    <a href="#" class="forgot-password-link text-success" data-bs-toggle="collapse" data-bs-target="#forgot-password-collapse">Forgot Password?</a>
+                    <button type="submit" class="btn btn-custom w-100">Login as NGO</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Private Company Login Form -->
+        <div class="tab-pane fade" id="private-company-login" role="tabpanel" aria-labelledby="private-company-login-tab">
+            <div class="card p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="company-email" class="form-label">Company Email</label>
+                        <input type="email" class="form-control" id="company-email" placeholder="Enter your company email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="company-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="company-password" placeholder="Enter password">
+                    </div>
+                    <a href="#" class="forgot-password-link text-success" data-bs-toggle="collapse" data-bs-target="#forgot-password-collapse">Forgot Password?</a>
+                    <button type="submit" class="btn btn-custom w-100">Login as Private Company</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Government Login Form -->
+        <div class="tab-pane fade" id="government-login" role="tabpanel" aria-labelledby="government-login-tab">
+            <div class="card p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="govt-email" class="form-label">Government Email</label>
+                        <input type="email" class="form-control" id="govt-email" placeholder="Enter your government email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="govt-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="govt-password" placeholder="Enter password">
+                    </div>
+                    <a href="#" class="forgot-password-link text-success" data-bs-toggle="collapse" data-bs-target="#forgot-password-collapse">Forgot Password?</a>
+                    <button type="submit" class="btn btn-custom w-100">Login as Government</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Public Login Form -->
+        <div class="tab-pane fade" id="public-login" role="tabpanel" aria-labelledby="public-login-tab">
+            <div class="card p-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="public-email" class="form-label">Public Email</label>
+                        <input type="email" class="form-control" id="public-email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="public-password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="public-password" placeholder="Enter password">
+                    </div>
+                    <a href="#" class="forgot-password-link text-success" data-bs-toggle="collapse" data-bs-target="#forgot-password-collapse">Forgot Password?</a>
+                    <button type="submit" class="btn btn-custom w-100">Login as Public</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Dropdown Section -->
+    <div class="collapse forgot-password-form" id="forgot-password-collapse">
+        <div class="card p-4">
+            <h5 class="text-center">Reset Password</h5>
+            <form>
+                <div class="mb-3">
+                    <label for="reset-email" class="form-label">Enter your registered email</label>
+                    <input type="email" class="form-control" id="reset-email" placeholder="Enter email for password reset">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Send Reset Link</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="links">
+        <!-- Home and Sign-up Links -->
+        <a href="index.html">Home</a> |
+        <a href="signup.html">Sign-up</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
